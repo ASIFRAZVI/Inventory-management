@@ -28,7 +28,7 @@ class InventoryMgmt(APIView):
 
         name = serializer.validated_data["name"]
         description = serializer.validated_data["description"]
-        if Inventory.objects.filter(name=name).exists():
+        if Inventory.objects.filter(name=name, user=user_id).exists():
             return Response(
                 {
                     "error": "the inventory obj already exists in db please provide the unique name & description"
