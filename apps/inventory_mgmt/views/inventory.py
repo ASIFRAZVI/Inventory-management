@@ -79,7 +79,7 @@ class InventoryMgmt(APIView):
         try:
             inventory_object = Inventory.objects.get(id=pk)
         except:
-            return Response({"message": "Inventory does't exists"}, status=200)
+            return Response({"message": "Inventory does't exists"}, status=400)
 
         serializers = InventoryReadSerializer(inventory_object)
         return Response(serializers.data, status=200)
@@ -95,7 +95,7 @@ class InventoryMgmt(APIView):
         try:
             inventory_object = Inventory.objects.get(id=pk)
         except:
-            return Response({"message": "Inventory does't exists"}, status=200)
+            return Response({"error": "Inventory does't exists"}, status=400)
 
         serializer = InventorySerializer(inventory_object, data=request.data)
 
@@ -115,6 +115,6 @@ class InventoryMgmt(APIView):
         try:
             inventory_object = Inventory.objects.get(id=pk)
         except:
-            return Response({"message": "Inventory does't exists"}, status=200)
+            return Response({"message": "Inventory does't exists"}, status=400)
         inventory_object.delete()
         return Response("Inventory deleted Succesfully! ", status=204)

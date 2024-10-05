@@ -212,10 +212,15 @@ Success: 204 No Content
 
 ---````------------------:^
 
-### For more information swagger documebtation
+### Explaination 
+Gdrive - https://drive.google.com/file/d/1YCdnRHgfcIs0u4Qvr1P9yCRM4idASNDp/view?usp=sharing
+or
+loom - https://www.loom.com/share/30482e0bcae54223abc8b3d553f53a5d?sid=897ccf2f-7358-4af2-9261-a3ac0a308a0d 
+
+### For more information refer swagger documebtation
 
 http://host:port/api/schema/swagger-ui/
 
 Portfolio = https://asifrazvi.netlify.app/
 
-------Thankyou :)
+----Thankyou :)
